@@ -161,7 +161,7 @@ const ProductPage = () => {
           >
             Filters
           </button>
-          <div className="d-flex text-center flex-wrap justify-content-around">
+          <div className="d-flex text-center flex-wrap ">
             {products?.map((p) => (
               <div
                 className="card m-1 col-10 col-sm-4 col-md-4  rounded-0 shadow"
