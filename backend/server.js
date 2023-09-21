@@ -7,11 +7,19 @@ import authRoutes from './routes/authRoute.js';
 import categoryRoutes from './routes/categoryRoutes.js';
 import productRoutes from './routes/productRoutes.js';
 import cors from 'cors';
+<<<<<<< HEAD
+=======
+import { fileURLToPath } from 'url';
+>>>>>>> 515a8a4e81c2fc7c43429719d66a99f8da4f08e5
 
 
 // Load environment variables from .env file
 dotenv.config();
 
+<<<<<<< HEAD
+=======
+// Get the directory name using import.meta.url
+>>>>>>> 515a8a4e81c2fc7c43429719d66a99f8da4f08e5
 
 
 // Database configuration and connection
@@ -25,13 +33,22 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
+<<<<<<< HEAD
 
+=======
+>>>>>>> 515a8a4e81c2fc7c43429719d66a99f8da4f08e5
 
 //routes
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/category', categoryRoutes);
 app.use('/api/v1/product', productRoutes);
 
+<<<<<<< HEAD
+=======
+//rest api
+
+
+>>>>>>> 515a8a4e81c2fc7c43429719d66a99f8da4f08e5
 //PORT
 const PORT = process.env.PORT || 8000;
 
