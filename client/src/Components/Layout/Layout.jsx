@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import { Helmet } from "react-helmet";
 import { Toaster } from "react-hot-toast";
 const Layout = ({ children, title, description, keywords, author }) => {
+  const mainRef = useRef(null);
+
+  useEffect(() => {
+    mainRef.current.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -14,7 +20,7 @@ const Layout = ({ children, title, description, keywords, author }) => {
         <title>{title}</title>
       </Helmet>
       <Header />
-      <main style={{ minHeight: "70vh" }}>
+      <main style={{ minHeight: "70vh" }} ref={mainRef}>
         <Toaster />
 
         {children}
